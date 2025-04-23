@@ -9,13 +9,13 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop view  */}
-      <section className='w-full smcontainer lg:container h-20 fixed 
-        flex flex-row justify-between items-center flex-wrap py-4'>
+      <section className='w-full smcontainer md:container h-20 fixed 
+        flex flex-row justify-between items-center flex-wrap px-8'>
         <Logo />
         <div className="flex md:hidden flex-row justify-center items-center">
-          <HiBars3 />
+          <HiBars3 className="text-2xl" />
         </div>
-        <div className="hidden md:flex flex-row gap-4 justify-center items-center">
+        <div className="hidden md:flex flex-row gap-10 justify-center items-center">
           <NavLinks />
         </div>
       </section>

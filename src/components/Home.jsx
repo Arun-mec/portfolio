@@ -4,10 +4,10 @@ import Button from './Button'
 
 const Home = () => {
     return (
-        <section id="home" className='smcontainer md:container h-[80vh] md:h-[100vh] flex gap-20 justify-start items-center'>
+        <section id="home" className='smcontainer md:container h-[80vh] lg:h-[100vh] flex gap-20 justify-start items-center'>
 
             <div
-                className='flex flex-col items-start justify-center gap-3 p-4'>
+                className='flex flex-col items-start justify-center gap-3'>
                 <span className='text-md font-syne font-bold flex flex-row items-center gap-2'>
                     <hr className='w-10' /> HI, I AM ARUN
                 </span>

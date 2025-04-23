@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NavLinks = () => {
-    const navbarItemStyle = 'text-md md:text-lg font-syne font-semibold mx-5 hover:underline cursor-pointer'
+    const navbarItemStyle = 'text-md md:text-lg font-syne font-semibold hover:underline cursor-pointer'
     return (
         <>
             <a className={navbarItemStyle} href='#home'>Home</a>

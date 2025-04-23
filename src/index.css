@@ -2,13 +2,13 @@
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 6rem;
+  padding-inline: 4rem;
   padding-top: 1rem;
 }
 
 @utility smcontainer {
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   padding-top: 1rem;
 }
 
