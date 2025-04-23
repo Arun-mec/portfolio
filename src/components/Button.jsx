@@ -9,7 +9,7 @@ const Button = ({
   disabled = false,
   className,
 }) => {
-  const buttonClass = `text-primary text-md font-syne border-[0.1rem] max-w-fit
+  const buttonClass = `text-primary text-md font-primary border-[0.1rem] max-w-fit
     border-primary p-2 rounded hover:bg-primary hover:text-dark 
     transition-all cursor-pointer ${varient} ${disabled ? "disabled" : ""} ${className}`;
 

@@ -15,12 +15,12 @@ const Navbar = () => {
         <div className="flex md:hidden flex-row justify-center items-center">
           <HiBars3 className="text-2xl" />
         </div>
-        <div className="hidden md:flex flex-row gap-10 justify-center items-center">
+        <div className="hidden md:flex flex-row gap-20 justify-center items-center">
           <NavLinks />
         </div>
       </section>
       {/* Mobile view */}
-
+      
     </>
   )
 }

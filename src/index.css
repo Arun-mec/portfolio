@@ -17,10 +17,8 @@
   --color-secondary: #22577a;
   --color-dark : #000;
   --color-light : #778da9;
-  --font-roboto : "Roboto", "sans-serif";
-  --font-syne : "Syne", "sans-serif";
-  --font-grotesk : "Space Grotesk", "sans-serif";
-  --font-lilita : "Lilita One", "sans-serif";
+  --font-primary: "Barlow", "sans-serif";
+  --font-secondary : "Syne", "sans-serif";
 
   --animate-textup : textup 1s ease-in-out infinite;
   @keyframes textup {
