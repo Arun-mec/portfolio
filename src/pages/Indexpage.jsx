@@ -5,7 +5,7 @@ import Home from "../components/Home"
 import Contact from "../components/Contact"
 import Work from "../components/Work"
 import Skills from "../components/Skills"
-import "./indexpage.css"
+import "./indexPage.css"
 import Profile from "../components/Profile"
 
 const Indexpage = () => {
