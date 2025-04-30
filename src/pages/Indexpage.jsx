@@ -8,6 +8,7 @@ import Skills from "../components/Skills"
 import Profile from "../components/Profile"
 import "./indexPage.css"
 import Services from "../components/Services"
+import Career from "../components/Career"
 
 const Indexpage = () => {
   return (
@@ -20,6 +21,7 @@ const Indexpage = () => {
         <Profile />
         <div className="w-full md:w-2/3 flex flex-col items-start gap-4 md:gap-6 overflow-y-auto overflow-x-hidden">
           <Home />
+          <Career />
           <Services />
           <Skills />
           <Work />

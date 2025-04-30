@@ -19,7 +19,7 @@ const Services = () => {
             content: "Custom software tailored to solve real business problems."
         },
         {
-            title: "Full package",
+            title: "Full Package",
             image: "/images/deployment.png",
             content: "Seamless deployment with ongoing support and updates."
         }]
