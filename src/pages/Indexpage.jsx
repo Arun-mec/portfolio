@@ -5,19 +5,22 @@ import Home from "../components/Home"
 import Contact from "../components/Contact"
 import Work from "../components/Work"
 import Skills from "../components/Skills"
-import "./indexPage.css"
 import Profile from "../components/Profile"
+import "./indexPage.css"
+import Services from "../components/Services"
 
 const Indexpage = () => {
   return (
-    <div className="flex flex-col gap-2 md:gap-4 items-center min-h-[100vh] relative py-10 font-outfit">
+    <div className="flex flex-col gap-2 md:gap-4 items-center min-h-[100vh] relative font-outfit">
       <div className="noise-overlay" />
-      <Navbar />
-      <div className="w-full smcontainer md:container flex flex-col md:flex-row gap-6">
+      <div className="smcontainer md:container w-full flex items-center justify-center">
+        <Navbar />
+      </div>
+      <div className="w-full smcontainer md:container flex flex-col md:flex-row gap-4 md:gap-6">
         <Profile />
-        <div className="w-full md:w-2/3 overflow-y-auto">
+        <div className="w-full md:w-2/3 flex flex-col items-start gap-4 md:gap-6 overflow-y-auto overflow-x-hidden">
           <Home />
-          <About />
+          <Services />
           <Skills />
           <Work />
           <Contact />

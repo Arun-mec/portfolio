@@ -7,7 +7,7 @@ const InverseButton = ({
     style
 }) => {
     const buttonStyle = `${style} flex flex-row gap-1 md:gap-2 items-center justify-center border-1 border-primary 
-    text-white p-2 px-6 relative rounded-sm md:rounded-md cursor-pointer`
+    text-white p-2 px-6 relative rounded cursor-pointer`
     return (
         <motion.div 
             initial="initial"

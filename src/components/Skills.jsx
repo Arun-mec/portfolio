@@ -1,74 +1,66 @@
-import React from 'react'
-import { FaPlus } from "react-icons/fa6";
+import React, { useEffect, useRef, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
-const SkillCard = () => {
-    const cardStyle = "aspect-square text-xl md:text-2xl bg-white/5 border-1 border-white/50 hover:border-white flex items-center justify-center cursor-pointer"
-    const categories = ["Languages", "Frameworks", "Database", "Also Familier With"]
+const SkillCard = ({
+    title, content
+}) => {
+    const [open, setOpen] = useState(false);
+    const contentRef = useRef(null);
+    const [maxHeight, setMaxHeight] = useState("0px");
+
+    useEffect(() => {
+        setMaxHeight(open ? `${contentRef.current.scrollHeight}px` : "0px");
+    }, [open]);
+
     return (
-        <div className="w-full col-span-2 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 hover">
-
+        <div className="bg-secondary rounded p-4 cursor-pointer gap-2 md:gap-4" onClick={() => setOpen(!open)}>
+            <section className="w-full flex items-center justify-between">
+                <span className="text-white text-lg md:text-xl">{title}</span>
+                <MdOutlineKeyboardArrowDown
+                    className={`text-xl md:text-2xl transform transition-transform duration-300 ${open ? "rotate-180 text-primary" : ""
+                        }`}
+                />  
+            </section>
+            <div
+                ref={contentRef}
+                className="overflow-hidden transition-all duration-500 ease-in-out"
+                style={{ maxHeight }}
+            >
+                <span className="text-light text-md md:text-lg block pt-2">{content}</span>
+            </div>
         </div>
-    )
+    );
 }
 
 const Skills = () => {
-
+    const categories = [
+        {
+            title: "Languages",
+            content: "Javascript, Java, C#"
+        },
+        {
+            title: "Frameworks/Libraries",
+            content: "React.js, Node.js, Express.js, Next.js"
+        },
+        {
+            title: "Database",
+            content: "SQL, MongoDB"
+        },
+        {
+            title: "Additional Tools",
+            content: "TailwindCSS, Material UI, Firebase, AWS, GitHub, Jira"
+        }]
     return (
-        <div id="about" className='smcontainer md:container grid grid-cols-1 md:grid-cols-2 gap-10 font-primary'>
-            <section className='flex flex-col items-start justify-start gap-10'>
-                <span className="text-2xl md:text-4xl text-light">My way of getting things done..</span>
-                <span className='text-lg md:text-xl'>Fast and transparent, the path to owning a website that will represent your brand in the best of light is only 4 weeks away. Standing by the Waterfall methodology, I assure a step by step completion of the whole process.</span>
-            </section>
-            <div className='w-full flex flex-col items-start justify-start gap-10 my-10'>
-                <div className="w-full flex flex-col gap-6">
-                    <section className='w-full flex items-center justify-between text-xl md:text-2xl'>
-                        <span>01</span>
-                        <span>Frameworks/Libraries</span>
-                        <span><FaPlus /></span>
-                    </section>
-                    <section className='w-full flex items-center justify-evenly text-md md:text-lg'>
-                        Fast and transparent, the path to owning a website that will represent your brand in the best of light is only 4 weeks away.
-                    </section>
-                    <hr />
-                </div>
-
-                <div className="w-full flex flex-col gap-6">
-                    <section className='w-full flex items-center justify-between text-xl md:text-2xl'>
-                        <span>01</span>
-                        <span>Frameworks/Libraries</span>
-                        <span><FaPlus /></span>
-                    </section>
-                    <section className='w-full flex items-center justify-evenly text-md md:text-lg'>
-                        Fast and transparent, the path to owning a website that will represent your brand in the best of light is only 4 weeks away.
-                    </section>
-                    <hr />
-                </div>
-
-                <div className="w-full flex flex-col gap-6">
-                    <section className='w-full flex items-center justify-between text-xl md:text-2xl'>
-                        <span>01</span>
-                        <span>Frameworks/Libraries</span>
-                        <span><FaPlus /></span>
-                    </section>
-                    <section className='w-full flex items-center justify-evenly text-md md:text-lg'>
-                        Fast and transparent, the path to owning a website that will represent your brand in the best of light is only 4 weeks away.
-                    </section>
-                    <hr />
-                </div>
-
-                <div className="w-full flex flex-col gap-6">
-                    <section className='w-full flex items-center justify-between text-xl md:text-2xl'>
-                        <span>01</span>
-                        <span>Frameworks/Libraries</span>
-                        <span><FaPlus /></span>
-                    </section>
-                    <section className='w-full flex items-center justify-evenly text-md md:text-lg'>
-                        Fast and transparent, the path to owning a website that will represent your brand in the best of light is only 4 weeks away.
-                    </section>
-                    <hr />
-                </div>
-
-            </div>
+        <div id="about" className='w-full smcontainer md:container flex flex-col gap-2 md:gap-4 font-primary'>
+            <span className='text-2xl md:text-4xl font-semibold'>Skills That Make <span className='text-primary'>It Happen</span></span>
+            {
+                categories.map((category) => {
+                    return (
+                        <SkillCard title={category.title} content={category.content} />
+                    )
+                })
+            }
         </div>
     )
 }

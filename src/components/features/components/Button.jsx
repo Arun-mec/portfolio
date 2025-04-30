@@ -7,7 +7,7 @@ const Button = ({
     onClick,
 }) => {
     const buttonStyle = `${style} flex flex-row items-center justify-center bg-primary 
-        text-white p-2 px-6 relative rounded-sm md:rounded-md cursor-pointer hover:bg-inverse`
+        text-white p-2 px-6 relative rounded cursor-pointer hover:bg-inverse`
     return (
         <div className={buttonStyle}>
             <motion.a

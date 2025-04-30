@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import NavLinks from './NavLinks'
-import { HiBars3 } from "react-icons/hi2";
-import Logo from './Logo';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,7 +18,7 @@ const Navbar = () => {
       </section> */
 
   <section className='w-full md:max-w-fit sticky top-0 z-[30] h-12 px-10
-    flex flex-row justify-center items-center gap-6 md:gap-10 bg-secondary rounded-md md:rounded-lg'>
+    flex flex-row justify-center items-center gap-6 md:gap-10 bg-secondary rounded'>
     <NavLinks />
   </section>
   )
