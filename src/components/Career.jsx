@@ -89,7 +89,7 @@ const Career = () => {
         <motion.div
             initial={{ y: -20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             className='smcontainer md:container
                 flex flex-col items-start justify-start gap-1 md:gap-2'>
             <span className='text-2xl md:text-4xl font-semibold'>Chapters on my <span className='text-primary'>Career</span></span>
