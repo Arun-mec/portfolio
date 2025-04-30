@@ -1,9 +1,14 @@
 import React from 'react'
 import Button from './features/components/Button'
+import { motion } from 'framer-motion'
 
 const ContactForm = () => {
     return (
-        <section id="about" className='smcontainer md:container
+        <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }} 
+            className='smcontainer md:container
                 flex flex-col items-start justify-start gap-2 md:gap-4'>
             <span className='text-4xl md:text-6xl font-semibold'>Let’s Create <br />Something <span className='text-primary'>Amazing</span></span>
             <form action="" className='w-full flex flex-col bg-secondary p-2 md:p-4 gap-2 md:gap-4 rounded-xl md:rounded-2xl text-sm md:text-md'>
@@ -24,7 +29,7 @@ const ContactForm = () => {
                 </section>
                 <Button content="Send" />
             </form>
-        </section>  
+        </motion.div>  
     )
 }
 

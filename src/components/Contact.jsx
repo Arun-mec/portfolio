@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react'
 import { LuMoveUpRight } from 'react-icons/lu';
 import { Link } from 'react-router-dom';
@@ -28,7 +29,11 @@ const Contact = () => {
 
   return (
     <Link to='/contact'>
-      <div className='group w-full smcontainer md:container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }} 
+            className='group w-full smcontainer md:container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <section className='w-full flex flex-col p-2 md:p-4 gap-2 md:gap-4 justify-start items-start 
           bg-secondary hover:bg-primary rounded cursor-pointer'>
           <section className='w-full flex flex-row justify-between items-center'>
@@ -47,7 +52,7 @@ const Contact = () => {
             I’m always open to exciting collaborations and creative challenges.
             Let’s work together to build something impactful and meaningful.</span>
         </section>
-      </div>
+      </motion.div>
     </Link>
 
   )

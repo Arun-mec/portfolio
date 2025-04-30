@@ -3,9 +3,10 @@ import Button from "./features/components/Button"
 import InverseButton from "./features/components/InverseButton"
 import AutoScrollCarousel from "./AutoScrollCarousel"
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const CountCard = ({
-    count, content, style
+    count, content
 }) => {
     return (
         <div className="flex flex-col items-start justify-center gap-1 md:gap-2">
@@ -35,9 +36,13 @@ const Home = () => {
     ]
     const listItemStyle = "text-light text-md md:text-lg"
     return (
-        <div id="home" className="w-full md:sticky flex-shrink-0 smcontainer md:container
+        <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            id="home" className="w-full md:sticky flex-shrink-0 smcontainer md:container
                         flex flex-col items-start justify-start gap-4 md:gap-8">
-            <span className="text-4xl md:text-6xl font-semibold">Transforming Your <br />Ideas into <span className="text-primary">Reality</span></span>
+            <span className="text-3xl md:text-6xl font-semibold">Transforming Your <br />Ideas into <span className="text-primary">Reality</span></span>
             <span className="text-light text-md md:text-lg">Passionate about creating intuitive and engaging user experiences. <br /> Specialize in transforming ideas into beautifully crafted products.</span>
             <section className="w-1/2 md:w-1/3 flex flex-row gap-1 md:gap-2">
                 {
@@ -56,7 +61,7 @@ const Home = () => {
                 <span className="text-light text-md md:text-lg">Fueled by Curiosity. Driven by Impact</span>
                 <AutoScrollCarousel />
             </section>
-        </div>
+        </motion.div>
     )
 }
 

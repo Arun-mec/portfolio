@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 const SkillCard = ({
@@ -52,17 +52,21 @@ const Skills = () => {
             content: "TailwindCSS, Material UI, Firebase, AWS, GitHub, Jira"
         }]
     return (
-        <div id="about" className='w-full smcontainer md:container flex flex-col gap-2 md:gap-4 font-primary'>
-            <span className='text-2xl md:text-4xl font-semibold'>Skills That Make 
-                <span className='text-primary'>It Happen</span></span>
-            {
-                categories.map((category) => {
-                    return (
-                        <SkillCard title={category.title} content={category.content} />
-                    )
-                })
-            }
-        </div>
+        <motion.div
+                    initial={{ y: -20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                className='w-full smcontainer md:container flex flex-col gap-2 md:gap-4 font-primary'>
+                <span className='text-2xl md:text-4xl font-semibold'>Skills That Make 
+                    <span className='text-primary'> It Happen</span></span>
+                {
+                    categories.map((category) => {
+                        return (
+                            <SkillCard title={category.title} content={category.content} />
+                        )
+                    })
+                }
+        </motion.div>
     )
 }
 

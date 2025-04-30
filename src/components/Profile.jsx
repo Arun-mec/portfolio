@@ -3,7 +3,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import { IoMdCall, IoMdMail } from 'react-icons/io'
 import Button from './features/components/Button'
 import InverseButton from './features/components/InverseButton'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const ContactLinks = () => {
     const connectStyle = 'text-lg md:text-xl cursor-pointer text-light hover:text-white'
@@ -33,7 +34,12 @@ const Profile = () => {
     };
     
     return (
-        <div className='w-full md:w-[25vw] md:sticky top-20 flex-shrink-0 cardcontainer md:container 
+        <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className='w-full md:w-[25vw] md:sticky top-20 flex-shrink-0 cardcontainer md:container 
             max-h-fit flex flex-col items-center justify-center gap-4 md:gap-6 bg-secondary rounded-lg md:rounded-xl'>
             <img src="/images/dev.webp" className='w-full h-[20rem] object-cover rounded-lg md:rounded-xl' alt="" />
             <section className='w-full flex flex-col items-center justify-center gap-0 md:gap-1'>
@@ -44,7 +50,7 @@ const Profile = () => {
             <ContactLinks />
             <InverseButton onclick={handleBtnClick} content="Let's Talk" style="w-full"/>
             <Button onclick={handleDownload} content="Resume" style="w-full"/>
-        </div>
+        </motion.div>
     )
 }
 
