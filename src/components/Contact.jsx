@@ -30,9 +30,9 @@ const Contact = () => {
   return (
     <Link to='/contact'>
       <motion.div
-            initial={{ y: -20, opacity: 0 }}
+            initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }} 
+            transition={{ duration: 0.75 }} 
             className='group w-full smcontainer md:container' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <section className='w-full flex flex-col p-2 md:p-4 gap-2 md:gap-4 justify-start items-start 
           bg-secondary hover:bg-primary rounded cursor-pointer'>

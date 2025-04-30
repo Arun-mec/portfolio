@@ -35,9 +35,9 @@ const Profile = () => {
     
     return (
         <motion.div
-            initial={{ y: -20, opacity: 0 }}
+            initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.75 }}
             viewport={{ once: true }}
             className='w-full md:w-[25vw] md:sticky top-20 flex-shrink-0 cardcontainer md:container 
             max-h-fit flex flex-col items-center justify-center gap-4 md:gap-6 bg-secondary rounded-lg md:rounded-xl'>

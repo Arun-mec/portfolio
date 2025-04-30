@@ -26,9 +26,9 @@ const Services = () => {
         }]
     return (
         <motion.div
-            initial={{ y: -20, opacity: 0 }}
+            initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.75 }}
             className='smcontainer md:container
                 flex flex-col items-start justify-start gap-2 md:gap-4'>
                 <span className='text-2xl md:text-4xl font-semibold'>Creative Solutions, Expertly <span className='text-primary'>Delivered</span></span>            

@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 const ContactForm = () => {
     return (
         <motion.div
-            initial={{ y: -20, opacity: 0 }}
+            initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }} 
-            className='smcontainer md:container
+            transition={{ duration: 0.75 }} 
+            className='w-full smcontainer md:container
                 flex flex-col items-start justify-start gap-2 md:gap-4'>
             <span className='text-4xl md:text-6xl font-semibold'>Let’s Create <br />Something <span className='text-primary'>Amazing</span></span>
             <form action="" className='w-full flex flex-col bg-secondary p-2 md:p-4 gap-2 md:gap-4 rounded-xl md:rounded-2xl text-sm md:text-md'>

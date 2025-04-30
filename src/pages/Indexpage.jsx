@@ -5,15 +5,41 @@ import Contact from "../components/Contact"
 import Work from "../components/Work"
 import Skills from "../components/Skills"
 import Profile from "../components/Profile"
-import "./indexPage.css"
 import Services from "../components/Services"
 import Career from "../components/Career"
-import ContactForm from "../components/ContactForm"
 import Footer from "../components/Footer"
+import "./indexPage.css"
+import { motion } from "framer-motion"
+
+
+const flipVariants = {
+  initial: {
+      rotateX: -90,
+      opacity: 0,
+      transformOrigin: "top center",
+  },
+  animate: {
+      rotateX: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeInOut" },
+  },
+  exit: {
+      rotateX: 90,
+      opacity: 0,
+      transformOrigin: "bottom center",
+      transition: { duration: 0.8, ease: "easeInOut" },
+  },
+};
 
 const Indexpage = () => {
   return (
-    <div className="flex flex-col gap-2 md:gap-4 items-center min-h-[100vh] relative font-outfit">
+    <motion.div
+      variants={flipVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      style={{ perspective: 1000 }} 
+      className="flex flex-col gap-2 md:gap-4 items-center min-h-[100vh] relative font-outfit">
       <div className="noise-overlay" />
       <div className="smcontainer md:container w-full flex items-center justify-center">
         <Navbar />
@@ -31,7 +57,7 @@ const Indexpage = () => {
       </div>
       <Footer />
 
-    </div>
+    </motion.div>
   )
 }
 

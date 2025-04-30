@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage'
 import WorksPage from './pages/WorksPage'
 import './index.css'
 import ContactPage from './pages/ContactPage'
+import { AnimatePresence } from 'framer-motion'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AnimatePresence mode="wait">
+      <RouterProvider router={router} />
+    </AnimatePresence>
   </StrictMode>,
 )

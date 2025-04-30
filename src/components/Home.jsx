@@ -37,9 +37,9 @@ const Home = () => {
     const listItemStyle = "text-light text-md md:text-lg"
     return (
         <motion.div
-            initial={{ y: -20, opacity: 0 }}
+            initial={{ y: -25, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.75 }}
             id="home" className="w-full md:sticky flex-shrink-0 smcontainer md:container
                         flex flex-col items-start justify-start gap-4 md:gap-8">
             <span className="text-3xl md:text-6xl font-semibold">Transforming Your <br />Ideas into <span className="text-primary">Reality</span></span>
