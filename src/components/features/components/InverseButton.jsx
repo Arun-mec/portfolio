@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 
 const InverseButton = ({
     content,
-    style
+    style,
+    onclick
 }) => {
     const buttonStyle = `${style} flex flex-row gap-1 md:gap-2 items-center justify-center border-1 border-primary 
     text-white p-2 px-6 relative rounded cursor-pointer`
@@ -12,7 +13,8 @@ const InverseButton = ({
         <motion.div 
             initial="initial"
             whileHover="hovered"
-            className={buttonStyle}>
+            className={buttonStyle}
+            onClick={onclick}>
             <span className='text-sm md:text-md'>{content}</span>
             <motion.span
                 variants={{

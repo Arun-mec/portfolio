@@ -1,6 +1,5 @@
 import React from "react"
 import Navbar from "../components/Navbar"
-import About from "../components/About"
 import Home from "../components/Home"
 import Contact from "../components/Contact"
 import Work from "../components/Work"
@@ -9,6 +8,8 @@ import Profile from "../components/Profile"
 import "./indexPage.css"
 import Services from "../components/Services"
 import Career from "../components/Career"
+import ContactForm from "../components/ContactForm"
+import Footer from "../components/Footer"
 
 const Indexpage = () => {
   return (
@@ -28,7 +29,7 @@ const Indexpage = () => {
           <Contact />
         </div>
       </div>
-
+      <Footer />
 
     </div>
   )

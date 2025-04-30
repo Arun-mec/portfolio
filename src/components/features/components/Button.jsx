@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 const Button = ({
     content,
     style,
-    onClick,
+    onclick
 }) => {
     const buttonStyle = `${style} flex flex-row items-center justify-center bg-primary 
         text-white p-2 px-6 relative rounded cursor-pointer hover:bg-inverse`
     return (
-        <div className={buttonStyle}>
+        <div className={buttonStyle} onClick={onclick}>
             <motion.a
                 initial="initial"
                 whileHover="hovered"

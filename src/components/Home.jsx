@@ -2,6 +2,7 @@ import React from "react"
 import Button from "./features/components/Button"
 import InverseButton from "./features/components/InverseButton"
 import AutoScrollCarousel from "./AutoScrollCarousel"
+import { useNavigate } from "react-router-dom"
 
 const CountCard = ({
     count, content, style
@@ -15,6 +16,13 @@ const CountCard = ({
 }
 
 const Home = () => {
+    const navigate = useNavigate();
+    const handleBtnClick = () => {
+        navigate('/contact')
+    }
+    const handleInvBtnClick = () => {
+        navigate('/work')
+    }
     const cardData = [
         {
             count: 2,
@@ -41,8 +49,8 @@ const Home = () => {
                 }
             </section>
             <section className="flex flex-col md:flex-row gap-2 md:gap-4">
-                <Button content="Let's Talk" />
-                <InverseButton content="My Works" />
+                <Button onclick={handleBtnClick} content="Let's Talk" />
+                <InverseButton onclick={handleInvBtnClick} content="My Works" />
             </section>
             <section className="flex flex-col items-start justify-start gap-1 md:gap-2 font-primary">
                 <span className="text-light text-md md:text-lg">Fueled by Curiosity. Driven by Impact</span>

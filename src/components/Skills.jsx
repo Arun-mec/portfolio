@@ -53,7 +53,8 @@ const Skills = () => {
         }]
     return (
         <div id="about" className='w-full smcontainer md:container flex flex-col gap-2 md:gap-4 font-primary'>
-            <span className='text-2xl md:text-4xl font-semibold'>Skills That Make <span className='text-primary'>It Happen</span></span>
+            <span className='text-2xl md:text-4xl font-semibold'>Skills That Make 
+                <span className='text-primary'>It Happen</span></span>
             {
                 categories.map((category) => {
                     return (

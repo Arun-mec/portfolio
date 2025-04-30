@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import { IoMdCall, IoMdMail } from 'react-icons/io'
 import Button from './features/components/Button'
 import InverseButton from './features/components/InverseButton'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ContactLinks = () => {
     const connectStyle = 'text-lg md:text-xl cursor-pointer text-light hover:text-white'
@@ -18,6 +19,19 @@ const ContactLinks = () => {
 
 
 const Profile = () => {
+    const navigate = useNavigate();
+
+    const handleBtnClick = () => {
+        console.log("hello")
+        navigate('/contact')
+    }
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href='/files/Resume.pdf'
+        link.download = 'Arun A_FullStackDeveloper_Resume.pdf'; 
+        link.click();
+    };
+    
     return (
         <div className='w-full md:w-[25vw] md:sticky top-20 flex-shrink-0 cardcontainer md:container 
             max-h-fit flex flex-col items-center justify-center gap-4 md:gap-6 bg-secondary rounded-lg md:rounded-xl'>
@@ -28,8 +42,8 @@ const Profile = () => {
                 <span className='text-md md:text-lg text-light'>Trivandrum, Kerala</span>
             </section>
             <ContactLinks />
-            <InverseButton content="Let's Talk" style="w-3/4"/>
-            <Button content="Resume" style="w-3/4"/>
+            <InverseButton onclick={handleBtnClick} content="Let's Talk" style="w-full"/>
+            <Button onclick={handleDownload} content="Resume" style="w-full"/>
         </div>
     )
 }

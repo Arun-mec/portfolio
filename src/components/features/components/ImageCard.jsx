@@ -31,22 +31,20 @@ const ImageCard = ({
 
     return (
         <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="w-full bg-secondary cursor-pointer relative rounded-xl md:rounded-2xl overflow-hidden"
-    >
-      <img
-        ref={imgRef}
-        src={image}
-        alt=""
-        className="w-full aspect-square object-cover rounded-xl md:rounded-2xl"
-      />
-      <section
-        className="absolute top-[70%] w-full h-[30%] flex flex-col items-start justify-center 
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="w-full bg-secondary cursor-pointer relative rounded-xl md:rounded-2xl overflow-hidden">
+            <img
+                ref={imgRef}
+                src={image}
+                alt=""
+                className="w-full aspect-square object-cover rounded-xl md:rounded-2xl"/>
+            <section
+                className="absolute top-[70%] w-full h-[30%] flex flex-col items-start justify-center 
           p-2 md:p-4 gap-2 md:gap-4 bg-secondary rounded-b-xl md:rounded-b-2xl"
-      >
-        <span ref={textRef} className="text-xl md:text-2xl">{title}</span>
-        <span className="text-sm md:text-md text-light">{content}</span>
+            >
+                <span ref={textRef} className="text-xl md:text-2xl">{title}</span>
+                <span className="text-sm md:text-md text-light">{content}</span>
       </section>
     </div>
     )
