@@ -4,19 +4,24 @@ import Card from './features/components/Card'
 const Services = () => {
     const services = [
         {
-            title: "Design",
-            image: "/images/dev.jpeg",
-            content: "Lalley of type and scrambled it to make a type specimen book"
+            title: "Web Design",
+            image: "/images/web_designing.png",
+            content: "Modern, responsive designs that enhance user experience and reflect your brand."
         },
         {
-            title: "Development",
-            image: "/images/dev.jpeg",
-            content: "Lorem Ipsum has been the industry's standard "
+            title: "Web Development",
+            image: "/images/web_development.png",
+            content: "Clean, scalable websites built with the latest web technologies."
+        },
+        {
+            title: "Software Development",
+            image: "/images/software_development.png",
+            content: "Custom software tailored to solve real business problems."
         },
         {
             title: "Full package",
-            image: "/images/dev.jpeg",
-            content: "Lorem Ipsum standard dummy text ever since the 1500s"
+            image: "/images/deployment.png",
+            content: "Seamless deployment with ongoing support and updates."
         }]
     return (
         <section id="about" className='smcontainer md:container
